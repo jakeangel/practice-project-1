@@ -1,63 +1,149 @@
-/*=======================
-         base styles
-========================*/
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-#header {
-  background: #5e92f2;
+body {
+  background: teal;
+}
+
+nav {
+  background: black;
   text-align: center;
-  font-size: 2em;
-  padding-top: 8em;
-  padding-bottom: 40px;
-  color: white;
-  height: 100vh;
 }
-
-#header .mini-title {
-  margin-top: 40px;
+nav ul {
+  list-style: none;
 }
-
-.button-div {
+nav ul li {
   display: inline-block;
-  border: 1px solid;
-  border-radius: 50%;
-  background: orange;
-  transition: background 0.5s ease-in;
-  box-shadow: 1px 2px 8px;
-  position: fixed;
-  top: 20px;
-  z-index: 1000;
+  margin: 0 20px;
 }
-
-.button-div .btn {
+nav ul li a {
   color: white;
-  display: block;
+  font-size: 18px;
+  display: inline-block;
+  padding: 1em 2em;
+}
+
+a {
   text-decoration: none;
+}
+
+header {
+  background: url(../images/header-pic.jpg) no-repeat center;
+  background-size: cover;
+  height: calc(100vh - 58px);
+  color: white;
+  padding-top: 1em;
+}
+
+header h1,
+header p {
+  text-align: center;
+  font-size: 3em;
+  text-shadow: 3px 0px black;
+  margin-top: 2em;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  height: 100%;
+  transition: transform 1s;
+  position: relative;
+  z-index: 1;
+}
+
+.photo-overlay {
+  width: 400px;
+  height: 300px;
+  margin: 15px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide p {
+  margin-top: 1em;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: red;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+
+.click-me {
+  color: white;
+  margin-top: 58px;
+  display: inline-block;
+  border-radius: 10px;
+  border: 2px solid;
+  padding: 13px;
+  transition: background 0.5s;
+}
+
+.click-me:hover {
+  background: teal;
+}
+
+.photo-overlay:hover img {
+  transform: translateX(100%);
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  float: left;
+}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
   padding: 20px;
+  width: 100%;
+  line-height: 1.5;
+  transition: bottom 0.5s;
 }
 
-.button-div:hover {
-  background: rebeccapurple;
+.container:hover .content {
+  bottom: 60%;
 }
 
-#header .header-pic {
-  border-radius: 50%;
+.right {
+  width: 500px;
+  position: relative;
   float: right;
-  width: 300px;
-  box-shadow: 1px 2px 8px #000;
+  height: 337.59px;
+  overflow: hidden;
 }
 
-/*======================
-	clearfixes
-==================*/
-#header:after {
-  content: "";
-  display: table;
-  clear: both;
+.text {
+  position: absolute;
+  top: 0;
+  color: white;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  line-height: 1.5;
+}
+
+.right img {
+  transition: transform 0.5s;
+}
+
+.right:hover img {
+  transform: scale(1.5);
 }
 
 /*# sourceMappingURL=style.css.map */
